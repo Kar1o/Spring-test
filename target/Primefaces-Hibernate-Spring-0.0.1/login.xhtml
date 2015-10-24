@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+	<title>Login</title>
+</h:head>
+
+<p:layout fullPage="false">
+	<p:layoutUnit position="center">
+
+		<h3>Simulador Siscomex</h3>
+
+		<h:form>
+			<h:panelGrid columns="1" id="matchGrid" cellpadding="5">
+				<h:outputLabel for="loginName" value="Usuario" />
+				<p:inputText name="loginName" value="#{checkLogin.login.usuario}" />
+
+				<h:outputLabel for="pwd" value="Senha" />
+				<p:password id="pwd" value="#{checkLogin.login.senha}"
+					label="Password" required="true" />
+			</h:panelGrid>
+		</h:form>
+
+
+		<p:button outcome="menu" value="Login" icon="ui-icon-person" />
+
+	</p:layoutUnit>
+
+
+</p:layout>
+
+
+</html>
